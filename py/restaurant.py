@@ -14,3 +14,7 @@ class Restaurant(Review):
 
     def customers(self):
         pass
+
+    def average_star_rating():
+        pass
+    

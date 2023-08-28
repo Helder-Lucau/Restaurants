@@ -12,17 +12,30 @@ For our purposes, a `Restaurant` has many `Reviews`, a `Customer` has many `Revi
 
 ## Deliverables
 
-Write a following ethods in the classes in the files provided. 
-
-## Challenge 3: Consonant value
-
-Given a lowercase string that has alphabetic characters only and no spaces, return the highest value of consonant substrings. Consonants are any letters of the alphabet except "aeiou".We shall assign the following values: a = 1, b = 2, c = 3, .... z = 26.
+* Customer should be initialized with a given name and family name, both strings (i.e., first and last name, like George Washington)"
+* returns the customer's given name
+* returns the customer's family name
+* returns the full name of the customer, with the given name and the family
+* returns the restaurant's name
+* returns the rating for a restaurant
+* returns all of the reviews
+* returns a list of all reviews for that restaurant
+* Returns a **unique** list of all customers who have reviewed a particular restaurant
+* Returns a **unique** list of all restaurants a customer has reviewed
+* Returns the total number of reviews that a customer has authored
+* returns the average star rating for a restaurant based on its reviews
 
 ## Project Setup 
 
-* Clone the repository: `https://github.com/Helder-Lucau/Restaurants`
-* Navigate to the cloned repository using the command: `cd folder_name`
-* Run on terminal
+### Clone the repository
+
+```https://github.com/Helder-Lucau/Restaurants```
+
+### Navigate to the cloned repository using the command: 
+
+```cd folder_name```
+
+### Run on terminal
 
 ## Author
 * This project code files is authored by [Helder Lucau](https://github.com/Helder-Lucau).
