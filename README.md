@@ -29,13 +29,18 @@ For our purposes, a `Restaurant` has many `Reviews`, a `Customer` has many `Revi
 
 ### Clone the repository
 
-```https://github.com/Helder-Lucau/Restaurants```
+```python
+https://github.com/Helder-Lucau/Restaurants
+```
 
 ### Navigate to the cloned repository using the command: 
 
-```cd folder_name```
+```python
+cd folder_name
+```
 
 ### Run on terminal
+
 
 ## Author
 * This project code files is authored by [Helder Lucau](https://github.com/Helder-Lucau).
