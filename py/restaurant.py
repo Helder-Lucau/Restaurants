@@ -17,9 +17,10 @@ class Restaurant(Review):
 
     # returns a unique list of all customers who have reviewed a particular
     def customers(self):
-        customer_list = ({r.customer for r in Review.all_reviews if r.restaurant.name == self.name})
+        customer_list = ({r.customer for r in Review.all_reviews if r.restaurant.name == self._name})
         return customer_list
 
+    # returns the average star rating for a restaurant based on its reviews
     def average_star_rating():
         pass
-    
+

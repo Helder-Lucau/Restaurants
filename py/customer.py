@@ -2,14 +2,13 @@ from review import Review
 
 class Customer:
 
-    customers = []
+    all_customers = []
 
     #init method that takes two arguments
     def __init__(self, first_name, last_name):
         self.first_name = first_name
         self.last_name = last_name
-        Customer.customers.append(self)
-        pass
+        Customer.all_customers.append(self)
 
     # return the customer given name (first name) 
     @property
@@ -34,8 +33,9 @@ class Customer:
         return f"{self.first_name} {self.last_name}"
 
     # return all of the customer 
+    @classmethod
     def all(cls):
-        return cls.customers
+        return cls.all_customers
 
     def restaurants():
         pass
@@ -46,8 +46,12 @@ class Customer:
     def num_reviews(): 
         pass
 
-    def find_by_name(name):
-        pass
+    def find_by_name(cls, name):
+        for customer in cls.all_customers:
+            if customer.full_name == name:
+                return customer
 
-    def find_all_by_given_name(name):
-        pass
+    def find_all_by_given_name(cls, name):
+        for customer in cls.all_customers:
+            if customer.given_name == name:
+                return customer
