@@ -43,14 +43,18 @@ class Customer:
     def add_review(restaurant, rating):
         pass
 
-    def num_reviews(): 
-        pass
-
+    # returns the total number of reviews that a customer has authored
+    def num_reviews(self): 
+        rev = Review.all_reviews
+        return len([r for r in rev if r.customer.full_name == self.full_name])
+    
+    # given a string of a full name returns the first customer whose full name matches 
     def find_by_name(cls, name):
         for customer in cls.all_customers:
             if customer.full_name == name:
                 return customer
 
+    # given a string of a given name returns a list containing all customers with that given name
     def find_all_by_given_name(cls, name):
         for customer in cls.all_customers:
             if customer.given_name == name:
