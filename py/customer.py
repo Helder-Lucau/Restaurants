@@ -39,12 +39,12 @@ class Customer:
 
     # returns a unique list of all restaurants a customer has reviewed
     def restaurants(self):
-        restaurant_list = ({r.restaurant for r in Review.all_reviews if r.customer.full_name == self.full_name})
+        restaurant_list = [r.restaurant for r in Review.all_reviews if r.customer.full_name == self.full_name]
         return restaurant_list
 
     # creates a new review and associates it with that customer and restaurant
     def add_review(self, restaurant, rating):
-        Review(self, restaurant=restaurant, rating=rating)
+        Review(self, restaurant, rating)
 
     # returns the total number of reviews that a customer has authored
     def num_reviews(self): 
@@ -52,12 +52,14 @@ class Customer:
         return len([r for r in rev if r.customer.full_name == self.full_name])
     
     # given a string of a full name returns the first customer whose full name matches 
+    @classmethod
     def find_by_name(cls, name):
         for customer in cls.all_customers:
             if customer.full_name == name:
                 return customer
 
     # given a string of a given name returns a list containing all customers with that given name
+    @classmethod
     def find_all_by_given_name(cls, name):
         for customer in cls.all_customers:
             if customer.given_name == name:

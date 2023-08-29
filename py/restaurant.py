@@ -22,5 +22,9 @@ class Restaurant(Review):
 
     # returns the average star rating for a restaurant based on its reviews
     def average_star_rating():
-        pass
+        ratings = 0
+        for review in Review.all_reviews:
+            ratings += review.rating()
+            average = sum(ratings)/len(Review.all_reviews)
+            return average
 
