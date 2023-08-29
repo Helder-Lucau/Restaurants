@@ -32,16 +32,19 @@ class Customer:
     def full_name(self):
         return f"{self.first_name} {self.last_name}"
 
-    # return all of the customer 
+    # returns all of the customers 
     @classmethod
     def all(cls):
         return cls.all_customers
 
-    def restaurants():
-        pass
+    # returns a unique list of all restaurants a customer has reviewed
+    def restaurants(self):
+        restaurant_list = ({r.restaurant for r in Review.all_reviews if r.customer.full_name == self.full_name})
+        return restaurant_list
 
-    def add_review(restaurant, rating):
-        pass
+    # creates a new review and associates it with that customer and restaurant
+    def add_review(self, restaurant, rating):
+        Review(self, restaurant=restaurant, rating=rating)
 
     # returns the total number of reviews that a customer has authored
     def num_reviews(self): 
